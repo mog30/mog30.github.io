@@ -1706,7 +1706,7 @@ body.loaded .content-section {
     width: 21px;
     height: 21px;
 
-    background: var(--icon-color);
+    background: #e8e8ec; /* Обычый цвет иконки */
 
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
@@ -1717,7 +1717,13 @@ body.loaded .content-section {
     -webkit-mask-size: contain;
     mask-size: contain;
 
+    /* Небольшое белое свечение в обычном состоянии */
+    filter:
+        drop-shadow(0 0 3px rgba(255, 255, 255, 0.45))
+        drop-shadow(0 0 7px rgba(255, 255, 255, 0.18));
+
     transition:
+        background-color 0.3s ease,
         transform 0.3s ease,
         filter 0.3s ease;
 }
@@ -1781,20 +1787,18 @@ body.loaded .content-section {
 
 
 /* =========================================================
-   GLOW
+   BRAND ICON HOVER
 ========================================================= */
 
 .link-card:hover .brand-logo {
+    /* Иконка становится фирменного цвета */
+    background: var(--icon-color);
+
     transform: scale(1.1);
 
+    /* Свечение становится такого же цвета */
     filter:
-        drop-shadow(
-            0 0 4px var(--icon-color)
-        )
-        drop-shadow(
-            0 0 9px var(--icon-color)
-        )
-        drop-shadow(
-            0 0 18px var(--icon-color)
-        );
+        drop-shadow(0 0 4px var(--icon-color))
+        drop-shadow(0 0 9px var(--icon-color))
+        drop-shadow(0 0 18px var(--icon-color));
 }
