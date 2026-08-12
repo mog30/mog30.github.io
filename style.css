@@ -1,1 +1,869 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Zen+Dots&display=swap');
 
+
+/* ================================
+   VARIABLES
+================================ */
+
+:root {
+
+    --bg: #080812;
+
+    --card: rgba(255, 255, 255, 0.045);
+
+    --card-hover: rgba(255, 255, 255, 0.075);
+
+    --border: rgba(255, 255, 255, 0.09);
+
+    --text: #f4f3fa;
+
+    --muted: #9c9aaa;
+
+    --pink: #ff7ac8;
+
+    --purple: #9d7cff;
+
+    --blue: #79b8ff;
+
+}
+
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 50% -20%,
+            rgba(157, 124, 255, 0.15),
+            transparent 45%
+        ),
+        var(--bg);
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ================================
+   BACKGROUND
+================================ */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    overflow: hidden;
+
+}
+
+
+.glow {
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    opacity: 0.25;
+
+}
+
+
+.glow-1 {
+
+    background: #9d7cff;
+
+    top: -150px;
+
+    left: -150px;
+
+}
+
+
+.glow-2 {
+
+    background: #ff7ac8;
+
+    top: 30%;
+
+    right: -200px;
+
+}
+
+
+.glow-3 {
+
+    background: #568cff;
+
+    bottom: -200px;
+
+    left: 30%;
+
+}
+
+
+/* ================================
+   GRID
+================================ */
+
+.grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,0.018) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.018) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 75%
+    );
+
+}
+
+
+/* ================================
+   CONTAINER
+================================ */
+
+.container {
+
+    width: min(900px, 92%);
+
+    margin: 0 auto;
+
+    padding: 100px 0 60px;
+
+}
+
+
+/* ================================
+   PROFILE
+================================ */
+
+.profile {
+
+    text-align: center;
+
+    margin-bottom: 90px;
+
+}
+
+
+.avatar-wrapper {
+
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 30px;
+
+}
+
+
+.avatar {
+
+    width: 150px;
+
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        0 0 50px rgba(157,124,255,0.3),
+        0 0 100px rgba(255,122,200,0.12);
+
+}
+
+
+.avatar-glow {
+
+    position: absolute;
+
+    inset: -20px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            from 0deg,
+            var(--purple),
+            var(--pink),
+            var(--blue),
+            var(--purple)
+        );
+
+    filter: blur(25px);
+
+    opacity: 0.35;
+
+    animation: rotateGlow 8s linear infinite;
+
+}
+
+
+@keyframes rotateGlow {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+.nickname {
+
+    font-family: "Zen Dots", sans-serif;
+
+    font-size: clamp(36px, 6vw, 62px);
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #e3d7ff,
+            #ffb7e1
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+.subtitle {
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    color: #a9a7b6;
+
+    padding: 7px 12px;
+
+    border: 1px solid var(--border);
+
+    background: rgba(255,255,255,0.03);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 50px;
+
+}
+
+
+.status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #73e6a7;
+
+    box-shadow: 0 0 12px #73e6a7;
+
+}
+
+
+/* ================================
+   SECTION TITLES
+================================ */
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    color: #8e8b9f;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+}
+
+
+.section-title::before,
+.section-title::after {
+
+    content: "";
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.12)
+        );
+
+    flex: 1;
+
+}
+
+
+.section-title::after {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.12),
+            transparent
+        );
+
+}
+
+
+/* ================================
+   LINKS
+================================ */
+
+.links-section {
+
+    margin-bottom: 100px;
+
+}
+
+
+.links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+.link-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    padding: 18px 20px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    background: var(--card);
+
+    backdrop-filter: blur(14px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.link-card:hover {
+
+    transform: translateY(-4px) scale(1.01);
+
+    background: var(--card-hover);
+
+    border-color: rgba(255,255,255,0.18);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.2),
+        0 0 30px rgba(157,124,255,0.06);
+
+}
+
+
+.link-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(157,124,255,0.16),
+            rgba(255,122,200,0.1)
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+}
+
+
+.link-info {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.link-name {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.link-description {
+
+    font-size: 12px;
+
+    color: var(--muted);
+
+}
+
+
+.arrow {
+
+    color: #7e7b8a;
+
+    font-size: 18px;
+
+    transition: transform 0.25s ease;
+
+}
+
+
+.link-card:hover .arrow {
+
+    transform: translate(3px, -3px);
+
+    color: white;
+
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.content-section {
+
+    margin-bottom: 100px;
+
+}
+
+
+.text-block {
+
+    color: #b4b1bf;
+
+    line-height: 1.9;
+
+    font-size: 15px;
+
+}
+
+
+.text-block p {
+
+    margin-bottom: 20px;
+
+}
+
+
+.text-block strong {
+
+    color: #eeeaf7;
+
+}
+
+
+/* ================================
+   INFO CARDS
+================================ */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+
+}
+
+
+.info-card {
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(14px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.info-card:hover {
+
+    transform: translateY(-5px);
+
+    background: var(--card-hover);
+
+}
+
+
+.card-symbol {
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+
+    color: var(--pink);
+
+}
+
+
+.info-card h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.info-card p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ================================
+   TAGS
+================================ */
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.tag {
+
+    padding: 10px 15px;
+
+    font-size: 12px;
+
+    border-radius: 50px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    color: #b9b6c4;
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.tag:hover {
+
+    transform: translateY(-2px);
+
+    background: var(--card-hover);
+
+    color: white;
+
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+
+    text-align: center;
+
+    color: #74717e;
+
+    font-size: 12px;
+
+    padding-top: 20px;
+
+}
+
+
+.footer-line {
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.12),
+            transparent
+        );
+
+    margin-bottom: 25px;
+
+}
+
+
+.footer span {
+
+    color: var(--pink);
+
+}
+
+
+.copyright {
+
+    margin-top: 8px;
+
+    opacity: 0.5;
+
+}
+
+
+/* ================================
+   REVEAL ANIMATION
+================================ */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+}
+
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 700px) {
+
+    .container {
+
+        padding-top: 70px;
+
+    }
+
+
+    .profile {
+
+        margin-bottom: 65px;
+
+    }
+
+
+    .avatar {
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .nickname {
+
+        font-size: 34px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .link-card {
+
+        padding: 15px;
+
+    }
+
+}
+
+
+/* ================================
+   CUSTOM SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #080812;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background: #272438;
+
+    border-radius: 10px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #3b3650;
+
+}
