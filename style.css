@@ -422,7 +422,7 @@ body {
 
 
 /* =========================================================
-   ANIME ART
+   ANIME ART - currently unused and not working
 ========================================================= */
 
 .anime-art-wrapper {
@@ -1284,6 +1284,9 @@ body {
 
     gap:
         9px;
+
+    justify-content:
+        center;
 
 }
 
