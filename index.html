@@ -1,135 +1,399 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>mog30 — Bio</title>
-    <meta name="description" content="Personal bio page of YOUR_NICK">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+        name="description"
+        content="Personal bio page of YOUR_NICK"
+    >
+
+    <title>YOUR_NICK — Bio</title>
+
+    <!-- Elegant minimal font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- Background -->
-    <div class="background">
-        <div class="glow glow-1"></div>
-        <div class="glow glow-2"></div>
-        <div class="glow glow-3"></div>
+    <!-- =========================================
+         LOADING SCREEN
+    ========================================== -->
 
-        <div class="grid"></div>
+    <div class="loader" id="loader">
 
-        <!-- Sakura particles -->
-        <div class="particles"></div>
+        <div class="loader-content">
+
+            <div class="loader-symbol">
+                ✦
+            </div>
+
+            <div class="loader-text">
+                INITIALIZING
+            </div>
+
+            <div class="loader-line">
+                <div class="loader-progress"></div>
+            </div>
+
+            <div class="loader-subtitle">
+                welcome
+            </div>
+
+        </div>
+
     </div>
 
 
+    <!-- =========================================
+         CUSTOM CURSOR
+    ========================================== -->
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-glow"></div>
+
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="background">
+
+        <div class="background-glow glow-1"></div>
+        <div class="background-glow glow-2"></div>
+        <div class="background-glow glow-3"></div>
+
+        <div class="grid"></div>
+
+        <!-- Anime illustration -->
+        <div class="anime-art-wrapper">
+
+            <img
+                src="anime-art.png"
+                alt=""
+                class="anime-art"
+                id="animeArt"
+            >
+
+        </div>
+
+        <!-- Japanese neon-like decorations -->
+
+        <div class="neon-sign neon-left">
+            <span>夢</span>
+        </div>
+
+        <div class="neon-sign neon-right">
+            <span>夜</span>
+        </div>
+
+        <!-- Sakura container -->
+        <div
+            class="sakura-container"
+            id="sakuraContainer"
+        ></div>
+
+    </div>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
     <main class="container">
 
-        <!-- PROFILE -->
+
+        <!-- =====================================
+             PROFILE
+        ====================================== -->
+
         <section class="profile reveal">
 
             <div class="avatar-wrapper">
+
+                <div class="avatar-ring"></div>
+
                 <div class="avatar-glow"></div>
-                <img src="avatar.jpg" alt="Avatar" class="avatar">
+
+                <img
+                    src="avatar.jpg"
+                    alt="Avatar"
+                    class="avatar"
+                >
+
             </div>
 
-            <h1 class="nickname">mog30</h1>
+
+            <h1 class="nickname">
+                mog30
+            </h1>
+
 
             <p class="subtitle">
-                welcome to my little corner of the internet ✦
+                welcome to my little corner of the internet
+                <span class="accent">✦</span>
             </p>
 
+
             <div class="status">
+
                 <span class="status-dot"></span>
-                <span>online somewhere...</span>
+
+                <span>
+                    online somewhere...
+                </span>
+
             </div>
 
         </section>
 
 
-        <!-- SOCIAL LINKS -->
+
+        <!-- =====================================
+             CONTACTS
+        ====================================== -->
+
         <section class="links-section reveal">
 
             <div class="section-title">
                 <span>CONTACTS</span>
             </div>
 
+
             <div class="links">
 
-                <a href="https://discord.com/users/792363874850045952" target="_blank" class="link-card">
-                    <div class="link-icon">◈</div>
 
-                    <div class="link-info">
-                        <span class="link-name">Discord</span>
-                        <span class="link-description">Free to talk</span>
+                <!-- DISCORD -->
+
+                <a
+                    href="https://discord.com/users/792363874850045952"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link-card"
+                >
+
+                    <div class="link-icon">
+                        ◈
                     </div>
 
-                    <span class="arrow">↗</span>
+
+                    <div class="link-info">
+
+                        <span class="link-name">
+                            Discord
+                        </span>
+
+                        <span class="link-description">
+                            Free to talk
+                        </span>
+
+                    </div>
+
+
+                    <span class="arrow">
+                        ↗
+                    </span>
+
                 </a>
 
 
-                <a href="https://t.me/mog3O" target="_blank" class="link-card">
-                    <div class="link-icon">✈</div>
 
-                    <div class="link-info">
-                        <span class="link-name">Telegram</span>
-                        <span class="link-description">Personal account</span>
+                <!-- TELEGRAM -->
+
+                <a
+                    href="https://t.me/mog3O"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link-card"
+                >
+
+                    <div class="link-icon">
+                        ✈
                     </div>
 
-                    <span class="arrow">↗</span>
+
+                    <div class="link-info">
+
+                        <span class="link-name">
+                            Telegram
+                        </span>
+
+                        <span class="link-description">
+                            Personal account
+                        </span>
+
+                    </div>
+
+
+                    <span class="arrow">
+                        ↗
+                    </span>
+
                 </a>
 
 
-                <a href="https://t.me/mog30_Devlogs" target="_blank" class="link-card">
-                    <div class="link-icon">☾</div>
 
-                    <div class="link-info">
-                        <span class="link-name">Telegram</span>
-                        <span class="link-description">My channel</span>
+                <!-- TELEGRAM CHANNEL -->
+
+                <a
+                    href="https://t.me/mog30_Devlogs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link-card"
+                >
+
+                    <div class="link-icon">
+                        ☾
                     </div>
 
-                    <span class="arrow">↗</span>
+
+                    <div class="link-info">
+
+                        <span class="link-name">
+                            Telegram
+                        </span>
+
+                        <span class="link-description">
+                            My channel
+                        </span>
+
+                    </div>
+
+
+                    <span class="arrow">
+                        ↗
+                    </span>
+
                 </a>
 
 
-                <a href="https://github.com/mog30" target="_blank" class="link-card">
-                    <div class="link-icon">⌘</div>
 
-                    <div class="link-info">
-                        <span class="link-name">GitHub</span>
-                        <span class="link-description">Projects & code</span>
+                <!-- GITHUB -->
+
+                <a
+                    href="https://github.com/mog30"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link-card"
+                >
+
+                    <div class="link-icon">
+                        ⌘
                     </div>
 
-                    <span class="arrow">↗</span>
+
+                    <div class="link-info">
+
+                        <span class="link-name">
+                            GitHub
+                        </span>
+
+                        <span class="link-description">
+                            Projects & code
+                        </span>
+
+                    </div>
+
+
+                    <span class="arrow">
+                        ↗
+                    </span>
+
                 </a>
+
+
+
+                <!-- STEAM -->
+
+                <a
+                    href="https://steamcommunity.com/id/mog30"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link-card"
+                >
+
+                    <div class="link-icon">
+                        ◉
+                    </div>
+
+
+                    <div class="link-info">
+
+                        <span class="link-name">
+                            Steam
+                        </span>
+
+                        <span class="link-description">
+                            Games & profile
+                        </span>
+
+                    </div>
+
+
+                    <span class="arrow">
+                        ↗
+                    </span>
+
+                </a>
+
 
             </div>
 
         </section>
 
 
-        <!-- ABOUT -->
+
+        <!-- =====================================
+             ABOUT
+        ====================================== -->
+
         <section class="content-section reveal">
 
             <div class="section-title">
                 <span>ABOUT ME</span>
             </div>
 
+
             <div class="text-block">
 
                 <p>
-                    Привет! Меня зовут <strong>mog30</strong>.
-                    Это моя маленькая страница в интернете,
-                    где можно узнать немного обо мне и найти мои контакты.
+
+                    Привет! Меня зовут
+                    <strong>mog30</strong>.
+
+                    Это моя небольшая страница в интернете,
+                    где можно узнать немного обо мне,
+                    моих проектах и интересах.
+
                 </p>
 
+
                 <p>
-                    В основном я занимаюсь <strong>разработкой,
-                    играми и различными техническими проектами</strong>.
-                    Люблю разбираться в том, как всё работает внутри,
-                    экспериментировать и создавать что-нибудь своё.
+
+                    В основном я занимаюсь
+                    <strong>
+                        разработкой, играми,
+                        моддингом и различными
+                        техническими проектами
+                    </strong>.
+
+                    Люблю экспериментировать и создавать
+                    собственные инструменты.
+
                 </p>
 
             </div>
@@ -137,90 +401,148 @@
         </section>
 
 
-        <!-- ACTIVITIES -->
+
+        <!-- =====================================
+             WHAT I DO
+        ====================================== -->
+
         <section class="content-section reveal">
 
             <div class="section-title">
                 <span>WHAT I DO</span>
             </div>
 
+
             <div class="cards">
 
+
                 <div class="info-card">
 
-                    <div class="card-symbol">⌘</div>
+                    <div class="card-symbol">
+                        ⌘
+                    </div>
 
-                    <h3>Development</h3>
+                    <h3>
+                        Development
+                    </h3>
 
                     <p>
-                        Программирование, разработка игр,
-                        Unity, инструменты и различные технические проекты.
+
+                        Программирование,
+                        разработка игр,
+                        Unity и инструменты.
+
                     </p>
 
                 </div>
 
 
+
                 <div class="info-card">
 
-                    <div class="card-symbol">◈</div>
+                    <div class="card-symbol">
+                        ◈
+                    </div>
 
-                    <h3>Game Modding</h3>
+                    <h3>
+                        Game Modding
+                    </h3>
 
                     <p>
-                        Работа со старыми играми, моддинг,
-                        исследование игровых файлов и создание собственных инструментов.
+
+                        Работа со старыми играми,
+                        моддинг.
+
                     </p>
 
                 </div>
 
 
+
                 <div class="info-card">
 
-                    <div class="card-symbol">✦</div>
+                    <div class="card-symbol">
+                        ✦
+                    </div>
 
-                    <h3>3D</h3>
+                    <h3>
+                        3D
+                    </h3>
 
                     <p>
-                        Blender, модели, ассеты,
-                        различные эксперименты с 3D.
+
+                        Blender, моделирование,
+                        ассеты.
+
                     </p>
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- HOBBIES -->
+
+        <!-- =====================================
+             HOBBIES
+        ====================================== -->
+
         <section class="content-section reveal">
 
             <div class="section-title">
                 <span>HOBBIES</span>
             </div>
 
+
             <div class="tags">
 
-                <span class="tag">🎮 Gaming</span>
-                <span class="tag">💻 Programming</span>
-                <span class="tag">🚗 Cars</span>
-                <span class="tag">🎨 3D</span>
-                <span class="tag">🎧 Music</span>
-                <span class="tag">🌸 Anime</span>
+                <span class="tag">
+                    🎮 Gaming
+                </span>
+
+                <span class="tag">
+                    💻 Programming
+                </span>
+
+                <span class="tag">
+                    🚗 Cars
+                </span>
+
+                <span class="tag">
+                    🎨 3D
+                </span>
+
+                <span class="tag">
+                    🎧 Music
+                </span>
+
+                <span class="tag">
+                    🌸 Anime
+                </span>
 
             </div>
 
         </section>
 
 
-        <!-- FOOTER -->
+
+        <!-- =====================================
+             FOOTER
+        ====================================== -->
+
         <footer class="footer reveal">
 
             <div class="footer-line"></div>
 
+
             <p>
-                made with <span>♥</span> and a little bit of caffeine
+                made with
+                <span>♥</span>
+                and a little bit of caffeine
             </p>
+
 
             <p class="copyright">
                 © 2026 mog30
@@ -228,9 +550,12 @@
 
         </footer>
 
+
     </main>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
