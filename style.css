@@ -1706,7 +1706,7 @@ body.loaded .content-section {
     width: 21px;
     height: 21px;
 
-    background: #e8e8ec; /* Обычый цвет иконки */
+    background: #DBD9DD; /* Обычый цвет иконки */
 
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
@@ -1719,9 +1719,10 @@ body.loaded .content-section {
 
     /* Небольшое белое свечение в обычном состоянии */
     filter:
-        drop-shadow(0 0 3px rgba(255, 255, 255, 0.45))
-        drop-shadow(0 0 7px rgba(255, 255, 255, 0.18));
-
+        drop-shadow(0 0 3px rgba(255, 255, 255, 0.95))
+        drop-shadow(0 0 8px rgba(255, 255, 255, 0.75))
+        drop-shadow(0 0 16px rgba(255, 255, 255, 0.45));
+   
     transition:
         background-color 0.3s ease,
         transform 0.3s ease,
@@ -1797,8 +1798,16 @@ body.loaded .content-section {
     transform: scale(1.1);
 
     /* Свечение становится такого же цвета */
+    .link-card:hover .brand-logo {
+    /* Иконка принимает свой цвет */
+    background: var(--icon-color);
+
+    transform: scale(1.1);
+
+    /* Цветной GLOW */
     filter:
-        drop-shadow(0 0 4px var(--icon-color))
-        drop-shadow(0 0 9px var(--icon-color))
-        drop-shadow(0 0 18px var(--icon-color));
+        drop-shadow(0 0 3px var(--icon-color))
+        drop-shadow(0 0 8px var(--icon-color))
+        drop-shadow(0 0 16px var(--icon-color))
+        drop-shadow(0 0 26px color-mix(in srgb, var(--icon-color) 55%, transparent));
 }
