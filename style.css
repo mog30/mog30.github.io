@@ -1058,11 +1058,11 @@ body {
 .link-card:hover .link-icon {
 
     background:
-        rgba(255,255,255,0.07);
+        rgba(255,255,255,0.055);
 
     box-shadow:
-        0 0 20px
-        rgba(163,139,255,0.08);
+        0 0 25px
+        rgba(163,139,255,0.07);
 
 }
 
@@ -1683,4 +1683,90 @@ body.loaded .content-section {
     background:
         #393444;
 
+}
+
+
+/* =========================================================
+   BRAND ICONS
+========================================================= */
+
+.brand-icon {
+    position: relative;
+    overflow: hidden;
+    filter:
+       brightness(0)
+       invert(1)
+       opacity(0.75);
+}
+
+.brand-icon img {
+    width: 21px;
+    height: 21px;
+
+    object-fit: contain;
+
+    opacity: 0.75;
+
+    filter: grayscale(1) brightness(1.8);
+
+    transition:
+        opacity 0.3s ease,
+        filter 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* Discord */
+
+.link-card:hover .discord-icon img {
+    opacity: 1;
+
+    filter:
+        grayscale(0)
+        brightness(1)
+        drop-shadow(0 0 8px rgba(88, 101, 242, 0.65));
+
+    transform: scale(1.1);
+}
+
+
+/* Telegram */
+
+.link-card:hover .telegram-icon img {
+    opacity: 1;
+
+    filter:
+        grayscale(0)
+        brightness(1)
+        drop-shadow(0 0 8px rgba(42, 171, 238, 0.65));
+
+    transform: scale(1.1);
+}
+
+
+/* GitHub */
+
+.link-card:hover .github-icon img {
+    opacity: 1;
+
+    filter:
+        grayscale(0)
+        brightness(1)
+        drop-shadow(0 0 8px rgba(255, 255, 255, 0.55));
+
+    transform: scale(1.1);
+}
+
+
+/* Steam */
+
+.link-card:hover .steam-icon img {
+    opacity: 1;
+
+    filter:
+        grayscale(0)
+        brightness(1)
+        drop-shadow(0 0 8px rgba(102, 192, 244, 0.65));
+
+    transform: scale(1.1);
 }
