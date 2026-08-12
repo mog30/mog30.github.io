@@ -1687,113 +1687,114 @@ body.loaded .content-section {
 
 
 /* =========================================================
-   BRAND ICONS
+   SVG BRAND LOGOS
 ========================================================= */
 
 .brand-icon {
     position: relative;
-    overflow: hidden;
-    filter:
-       brightness(0)
-       invert(1)
-       opacity(0.75);
+    overflow: visible;
+
+    --icon-color: #ffffff;
 }
 
-.brand-icon img {
+
+.brand-logo {
+    position: relative;
+
+    display: block;
+
     width: 21px;
     height: 21px;
 
-    object-fit: contain;
+    background: var(--icon-color);
 
-    opacity: 0.75;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 
-    /* Делаем чёрный SVG белым */
-    filter:
-        brightness(0)
-        invert(1);
+    -webkit-mask-position: center;
+    mask-position: center;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
 
     transition:
-        opacity 0.3s ease,
-        filter 0.3s ease,
-        transform 0.3s ease;
+        transform 0.3s ease,
+        filter 0.3s ease;
 }
 
 
 /* Discord */
 
-.link-card:hover .discord-icon img {
-    opacity: 1;
-
-    filter:
-        brightness(0)
-        saturate(100%)
-        invert(40%)
-        sepia(90%)
-        saturate(1800%)
-        hue-rotate(210deg)
-        brightness(100%)
-        contrast(100%)
-        drop-shadow(0 0 4px rgba(88, 101, 242, 0.95))
-        drop-shadow(0 0 10px rgba(88, 101, 242, 0.7))
-        drop-shadow(0 0 20px rgba(88, 101, 242, 0.4));
-
-    transform: scale(1.1);
+.discord-icon {
+    --icon-color: #5865F2;
 }
+
+.discord-icon .brand-logo {
+    -webkit-mask-image: url("icons/discord.svg");
+    mask-image: url("icons/discord.svg");
+}
+
 
 /* Telegram */
 
-.link-card:hover .telegram-icon img {
-    opacity: 1;
-
-    filter:
-        brightness(0)
-        saturate(100%)
-        invert(55%)
-        sepia(80%)
-        saturate(1500%)
-        hue-rotate(165deg)
-        brightness(105%)
-        contrast(100%)
-        drop-shadow(0 0 4px rgba(42, 171, 238, 0.95))
-        drop-shadow(0 0 10px rgba(42, 171, 238, 0.7))
-        drop-shadow(0 0 20px rgba(42, 171, 238, 0.4));
-
-    transform: scale(1.1);
+.telegram-icon {
+    --icon-color: #2AABEE;
 }
+
+.telegram-icon .brand-logo {
+    -webkit-mask-image: url("icons/telegram.svg");
+    mask-image: url("icons/telegram.svg");
+}
+
+.telegramchannel-icon {
+    --icon-color: #D02525;
+}
+
+.telegramchannel-icon .brand-logo {
+    -webkit-mask-image: url("icons/telegram.svg");
+    mask-image: url("icons/telegram.svg");
+}
+
 
 /* GitHub */
 
-.link-card:hover .github-icon img {
-    opacity: 1;
+.github-icon {
+    --icon-color: #ffffff;
+}
 
-    filter:
-        brightness(0)
-        invert(1)
-        drop-shadow(0 0 4px rgba(255, 255, 255, 1))
-        drop-shadow(0 0 10px rgba(255, 255, 255, 0.75))
-        drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
-
-    transform: scale(1.1);
+.github-icon .brand-logo {
+    -webkit-mask-image: url("icons/github.svg");
+    mask-image: url("icons/github.svg");
 }
 
 
 /* Steam */
 
-.link-card:hover .steam-icon img {
-    opacity: 1;
+.steam-icon {
+    --icon-color: #66C0F4;
+}
+
+.steam-icon .brand-logo {
+    -webkit-mask-image: url("icons/steam.svg");
+    mask-image: url("icons/steam.svg");
+}
+
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.link-card:hover .brand-logo {
+    transform: scale(1.1);
 
     filter:
-        brightness(0)
-        saturate(100%)
-        invert(70%)
-        sepia(30%)
-        saturate(1000%)
-        hue-rotate(165deg)
-        brightness(105%)
-        contrast(100%)
-        drop-shadow(0 0 4px rgba(102, 192, 244, 0.95))
-        drop-shadow(0 0 10px rgba(102, 192, 244, 0.7))
-        drop-shadow(0 0 20px rgba(102, 192, 244, 0.4));
-
-    transform: scale(1.1);
+        drop-shadow(
+            0 0 4px var(--icon-color)
+        )
+        drop-shadow(
+            0 0 9px var(--icon-color)
+        )
+        drop-shadow(
+            0 0 18px var(--icon-color)
+        );
 }
