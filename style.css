@@ -1707,7 +1707,10 @@ body.loaded .content-section {
 
     opacity: 0.75;
 
-    filter: grayscale(1) brightness(1.8);
+    /* Делаем чёрный SVG белым */
+    filter:
+        brightness(0)
+        invert(1);
 
     transition:
         opacity 0.3s ease,
@@ -1722,13 +1725,20 @@ body.loaded .content-section {
     opacity: 1;
 
     filter:
-        grayscale(0)
-        brightness(1)
-        drop-shadow(0 0 8px rgba(88, 101, 242, 0.65));
+        brightness(0)
+        saturate(100%)
+        invert(40%)
+        sepia(90%)
+        saturate(1800%)
+        hue-rotate(210deg)
+        brightness(100%)
+        contrast(100%)
+        drop-shadow(0 0 4px rgba(88, 101, 242, 0.95))
+        drop-shadow(0 0 10px rgba(88, 101, 242, 0.7))
+        drop-shadow(0 0 20px rgba(88, 101, 242, 0.4));
 
     transform: scale(1.1);
 }
-
 
 /* Telegram */
 
@@ -1736,13 +1746,20 @@ body.loaded .content-section {
     opacity: 1;
 
     filter:
-        grayscale(0)
-        brightness(1)
-        drop-shadow(0 0 8px rgba(42, 171, 238, 0.65));
+        brightness(0)
+        saturate(100%)
+        invert(55%)
+        sepia(80%)
+        saturate(1500%)
+        hue-rotate(165deg)
+        brightness(105%)
+        contrast(100%)
+        drop-shadow(0 0 4px rgba(42, 171, 238, 0.95))
+        drop-shadow(0 0 10px rgba(42, 171, 238, 0.7))
+        drop-shadow(0 0 20px rgba(42, 171, 238, 0.4));
 
     transform: scale(1.1);
 }
-
 
 /* GitHub */
 
@@ -1750,9 +1767,11 @@ body.loaded .content-section {
     opacity: 1;
 
     filter:
-        grayscale(0)
-        brightness(1)
-        drop-shadow(0 0 8px rgba(255, 255, 255, 0.55));
+        brightness(0)
+        invert(1)
+        drop-shadow(0 0 4px rgba(255, 255, 255, 1))
+        drop-shadow(0 0 10px rgba(255, 255, 255, 0.75))
+        drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
 
     transform: scale(1.1);
 }
@@ -1764,9 +1783,17 @@ body.loaded .content-section {
     opacity: 1;
 
     filter:
-        grayscale(0)
-        brightness(1)
-        drop-shadow(0 0 8px rgba(102, 192, 244, 0.65));
+        brightness(0)
+        saturate(100%)
+        invert(70%)
+        sepia(30%)
+        saturate(1000%)
+        hue-rotate(165deg)
+        brightness(105%)
+        contrast(100%)
+        drop-shadow(0 0 4px rgba(102, 192, 244, 0.95))
+        drop-shadow(0 0 10px rgba(102, 192, 244, 0.7))
+        drop-shadow(0 0 20px rgba(102, 192, 244, 0.4));
 
     transform: scale(1.1);
 }
