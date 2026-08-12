@@ -1,10 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>Мой мини-сайт</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YOUR_NICK — Bio</title>
+    <meta name="description" content="Personal bio page of YOUR_NICK">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Привет, мир! Мой сайт работает.</h1>
+
+    <!-- Background -->
+    <div class="background">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+
+        <div class="grid"></div>
+
+        <!-- Sakura particles -->
+        <div class="particles"></div>
+    </div>
+
+
+    <main class="container">
+
+        <!-- PROFILE -->
+        <section class="profile reveal">
+
+            <div class="avatar-wrapper">
+                <div class="avatar-glow"></div>
+                <img src="avatar.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <h1 class="nickname">YOUR_NICK</h1>
+
+            <p class="subtitle">
+                welcome to my little corner of the internet ✦
+            </p>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                <span>online somewhere...</span>
+            </div>
+
+        </section>
+
+
+        <!-- SOCIAL LINKS -->
+        <section class="links-section reveal">
+
+            <div class="section-title">
+                <span>CONTACTS</span>
+            </div>
+
+            <div class="links">
+
+                <a href="https://discord.com/" target="_blank" class="link-card">
+                    <div class="link-icon">◈</div>
+
+                    <div class="link-info">
+                        <span class="link-name">Discord</span>
+                        <span class="link-description">Let's talk</span>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </a>
+
+
+                <a href="https://t.me/" target="_blank" class="link-card">
+                    <div class="link-icon">✈</div>
+
+                    <div class="link-info">
+                        <span class="link-name">Telegram</span>
+                        <span class="link-description">Personal account</span>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </a>
+
+
+                <a href="https://t.me/" target="_blank" class="link-card">
+                    <div class="link-icon">☾</div>
+
+                    <div class="link-info">
+                        <span class="link-name">Telegram Channel</span>
+                        <span class="link-description">My channel</span>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </a>
+
+
+                <a href="https://github.com/" target="_blank" class="link-card">
+                    <div class="link-icon">⌘</div>
+
+                    <div class="link-info">
+                        <span class="link-name">GitHub</span>
+                        <span class="link-description">Projects & code</span>
+                    </div>
+
+                    <span class="arrow">↗</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="content-section reveal">
+
+            <div class="section-title">
+                <span>ABOUT ME</span>
+            </div>
+
+            <div class="text-block">
+
+                <p>
+                    Привет! Меня зовут <strong>YOUR_NAME</strong>.
+                    Это моя маленькая страница в интернете,
+                    где можно узнать немного обо мне и найти мои контакты.
+                </p>
+
+                <p>
+                    В основном я занимаюсь <strong>разработкой,
+                    играми и различными техническими проектами</strong>.
+                    Люблю разбираться в том, как всё работает внутри,
+                    экспериментировать и создавать что-нибудь своё.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIVITIES -->
+        <section class="content-section reveal">
+
+            <div class="section-title">
+                <span>WHAT I DO</span>
+            </div>
+
+            <div class="cards">
+
+                <div class="info-card">
+
+                    <div class="card-symbol">⌘</div>
+
+                    <h3>Development</h3>
+
+                    <p>
+                        Программирование, разработка игр,
+                        Unity, инструменты и различные технические проекты.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="card-symbol">◈</div>
+
+                    <h3>Game Modding</h3>
+
+                    <p>
+                        Работа со старыми играми, моддинг,
+                        исследование игровых файлов и создание собственных инструментов.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="card-symbol">✦</div>
+
+                    <h3>3D</h3>
+
+                    <p>
+                        Blender, модели, ассеты,
+                        различные эксперименты с 3D.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOBBIES -->
+        <section class="content-section reveal">
+
+            <div class="section-title">
+                <span>HOBBIES</span>
+            </div>
+
+            <div class="tags">
+
+                <span class="tag">🎮 Gaming</span>
+                <span class="tag">💻 Programming</span>
+                <span class="tag">🚗 Cars</span>
+                <span class="tag">🎨 3D</span>
+                <span class="tag">🎧 Music</span>
+                <span class="tag">🌸 Anime</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer reveal">
+
+            <div class="footer-line"></div>
+
+            <p>
+                made with <span>♥</span> and a little bit of caffeine
+            </p>
+
+            <p class="copyright">
+                © 2026 YOUR_NICK
+            </p>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
